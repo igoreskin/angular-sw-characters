@@ -13,6 +13,10 @@ import { CharacterService } from './character/character.service';
 export class AppComponent implements OnInit{
   title = 'angular-sw-characters';
   characters: Character[] = [];
+  images: [
+    '../images/luke.jpg', '../images/darth.jpg', '../images/obi.jpg', '../images/r2d2.jpg'
+  ];
+  
   private charSub: Subscription;
 
   constructor(private characterService: CharacterService){}

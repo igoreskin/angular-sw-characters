@@ -2,9 +2,54 @@ html {
   height: 100vh;
   background: url('../images/19424.jpg') no-repeat center center fixed;
   background-size: cover;
-  /* background-position: center; */
+  font-family: 'Roboto';
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 60px;
+}
+
+.images {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-left: 200px;
+  padding-right: 90px;
 }
 
 li {
   color: white;
+  display: inline;
+  margin: 0 50px;
+  font-size: 200%;
+}
+
+.luke {
+  height: 100px;
+  width: 150px;
+  background: url('../images/luke.jpg');
+  background-size: 150px 100px;
+}
+
+.darth {
+  height: 100px;
+  width: 150px;
+  background: url('../images/darth.jpg');
+  background-size: 150px 100px;
+}
+
+.obi {
+  height: 100px;
+  width: 150px;
+  background: url('../images/obi.png');
+  background-size: 150px 100px;
+}
+
+.r2d2 {
+  height: 100px;
+  width: 150px;
+  background: url('../images/r2d2.jpg');
+  background-size: 150px 100px;
 }
