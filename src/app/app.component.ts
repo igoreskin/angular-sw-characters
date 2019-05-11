@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { Character } from './character/character.model';
 import { Subscription } from 'rxjs';
@@ -10,7 +10,7 @@ import { CharacterService } from './character/character.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit, OnDestroy {
   title = 'angular-sw-characters';
   characters: Character[] = [];
   images: [
@@ -27,5 +27,9 @@ export class AppComponent implements OnInit{
       this.characters = res['characters'];
       console.log(res['characters'])
     });
+  }
+
+  ngOnDestroy() {
+    this.charSub.unsubscribe();
   }
 }
