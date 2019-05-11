@@ -1,0 +1,10 @@
+html {
+  height: 100vh;
+  background: url('../images/19424.jpg') no-repeat center center fixed;
+  background-size: cover;
+  /* background-position: center; */
+}
+
+li {
+  color: white;
+}
