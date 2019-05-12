@@ -36,7 +36,7 @@ a:active, a:hover {
   color: #ff3838;
 }
 
-.active {
+.red {
   color: #ff3838;
   font-weight: 500;
   text-shadow:

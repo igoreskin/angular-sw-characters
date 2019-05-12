@@ -27,7 +27,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
             errorMessage = `Error: ${error.error.message}`;
           } else {
             // server-side error
-            errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+            errorMessage = `Error Code: ${error.status}\nTHIS CHARACTER CANNOT BE ACCESSED!`;
           }
           window.alert(errorMessage);
           this.router.navigate(['']);
@@ -36,3 +36,5 @@ export class HttpErrorInterceptor implements HttpInterceptor {
       )
   }
 }
+
+// Message: ${error.message}
