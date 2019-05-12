@@ -1,9 +1,8 @@
-<div class="animated rotateIn">
+<div>
 <div class="container">
   <div class="movie-wrapper">
-    <div class="movie-data" *ngFor='let movie of movies; let i = index'>
+    <div [@rotateIn]="rotateIn" class="movie-data" *ngFor='let movie of movies; let i = index'>
       <p>{{ movie.title }}, released on {{ movie.release_date | date: 'fullDate'}}</p>
-      <p></p>
     </div>
   </div>
 </div>

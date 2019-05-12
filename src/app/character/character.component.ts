@@ -5,13 +5,20 @@ import { Character } from './character.model';
 import { Movie } from './movie.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { rotateIn } from 'ng-animate';
+import { trigger, transition, useAnimation } from '@angular/animations';
 
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrls: ['./character.component.css']
+  styleUrls: ['./character.component.css'],
+  animations: [
+    trigger('rotateIn', [transition('* => *', useAnimation(rotateIn))])
+  ],
 })
+
 export class CharacterComponent implements OnInit {
+  rotateIn: any;
   id: string;
   character: Character;
   movies: Movie[];
