@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { CharacterService } from './character.service';
 import { Character } from './character.model';
@@ -17,7 +17,7 @@ import { trigger, transition, useAnimation } from '@angular/animations';
   ],
 })
 
-export class CharacterComponent implements OnInit {
+export class CharacterComponent implements OnInit, OnDestroy {
   rotateIn: any;
   id: string;
   character: Character;
@@ -45,6 +45,13 @@ export class CharacterComponent implements OnInit {
         })
       })
     })
+  }
+
+  ngOnDestroy() {
+    this.subRoute.unsubscribe();
+    this.subChar.unsubscribe();
+    this.subMovie.unsubscribe();
+    this.subFork.unsubscribe();
   }
 
 }

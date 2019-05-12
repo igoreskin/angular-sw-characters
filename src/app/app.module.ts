@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CharacterComponent } from './character/character.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LaunchComponent } from './launch/launch.component';
+import { HttpErrorInterceptor } from './http-error.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { LaunchComponent } from './launch/launch.component';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 

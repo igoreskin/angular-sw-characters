@@ -3,6 +3,7 @@ import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
 import { Character } from './character.model';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class CharacterService {
   characters = new BehaviorSubject<Character[]>([]);
   // forkjoin = new Observable<any>();
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.http.get('../assets/characters.json')
     .subscribe(res => {
       this.characters.next(res['characters']);
