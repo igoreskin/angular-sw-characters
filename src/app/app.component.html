@@ -2,9 +2,8 @@
   <div class="wrapper">
     <ul class="char-list">
       <li 
-      *ngFor='let character of characters; let i=index'
-      routerLinkActive='active'>
-        <a [routerLink] = 'i'>{{character.name}}</a>
+      *ngFor='let character of characters; let i=index'>
+        <a [routerLink] = 'i' routerLinkActive='active' routerLinkActiveOptions="{exact:true}">{{character.name}}</a>
       </li>
     </ul>
   </div>

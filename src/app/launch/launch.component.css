@@ -1,0 +1,13 @@
+div {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+p {
+  color: white;
+  float: left;
+  font-weight: 300;
+  font-size: 120%;
+  letter-spacing: 0.7px
+}
