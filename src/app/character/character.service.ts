@@ -12,7 +12,12 @@ export class CharacterService {
   characters = new BehaviorSubject<Character[]>([]);
   // forkjoin = new Observable<any>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.http.get('../assets/characters.json')
+    .subscribe(res => {
+      this.characters.next(res['characters']);
+    });
+  }
 
   getCharacters() {
     return this.http.get('../assets/characters.json');

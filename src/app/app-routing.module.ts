@@ -5,7 +5,7 @@ import { CharacterComponent } from  './character/character.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', component: AppComponent },
+  // { path: '', component: AppComponent },
   { path: ':id', component: CharacterComponent },
 ];
 

@@ -1,6 +1,10 @@
-<div class="movie-wrapper">
-  <div class="movie-data">
-    <p>{{ movie.title }}</p>
-    <p>{{ movie.release_date | date: 'tullDate'}}</p>
+<div class="animated rotateIn">
+<div class="container">
+  <div class="movie-wrapper">
+    <div class="movie-data" *ngFor='let movie of movies; let i = index'>
+      <p>{{ movie.title }}, released on {{ movie.release_date | date: 'fullDate'}}</p>
+      <p></p>
+    </div>
   </div>
+</div>
 </div>

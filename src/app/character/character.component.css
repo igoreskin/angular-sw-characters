@@ -1,3 +1,18 @@
-* {
-  color: white;
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.movie-wrapper {
+  color: #ff3838;
+  margin-top: 80px;
+  margin-right: 50px;
+  font-size: 140%;
+  font-weight: bold;
+  text-shadow:
+       3px 3px 0 #ffffff,
+     -1px -1px 0 #ffffff,  
+      1px -1px 0 #ffffff,
+      -1px 1px 0 #ffffff,
+       1px 1px 0 #ffffff;
 }
