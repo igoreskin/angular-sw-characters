@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private characterService: CharacterService) { }
 
-  sound = new Howl({ src: ['../assets/Battles_Endor_Fight_Theme_Loop.mp3'] })
+  sound = new Howl({ src: ['../assets/Battles_Endor_Fight_Theme_Loop.mp3'], volume: 0.4 })
 
   ngOnInit() {
     this.charSub = this.characterService.getCharacters()
@@ -31,6 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
         console.log(res['characters'])
       });
     this.sound.play();
+    this.sound.on('end', () => this.sound.play()); // this line makes it play indefinitely 
   }
 
   ngOnDestroy() {
